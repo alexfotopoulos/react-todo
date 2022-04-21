@@ -24,6 +24,7 @@ header {
     align-items: center;
     padding-left: 1.5rem;
     font-size: larger;
+    margin-bottom: 1rem;
 }
 
 footer {
@@ -31,20 +32,23 @@ footer {
     padding: 0 1.5rem;
     color: rgb(184, 184, 184);
     height: 10%;
+    display: flex;
+    justify-content: center;
 }
 
 .App-todoContainer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 80%
+    height: 80%;
 }
 
 .App-footerContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 3.3rem
+    height: 3.3rem;
+    width: 50%;
 }
 
 .App-footerElement {

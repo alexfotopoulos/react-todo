@@ -1,19 +1,23 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import TodoContext from '../store/TodoContext'
 import './Todo.css'
 
-export default function Todo(props) {
-    const [isChecked, setIsChecked] = useState(false)
+export default function Todo({todo}) {
+    const [isCompleted, setIsCompleted] = useState(false)
+    const todoCtx = useContext(TodoContext)
 
-    function toggleChecked() {
-        setIsChecked(prevIsChecked => !prevIsChecked)
+    function toggleCompleted() {
+        setIsCompleted(prevIsCompleted => !prevIsCompleted)
     }
+
+    function handleDeleteActiveTodo() {
+        todoCtx.deleteTodo(todo)
+      }
+
     return (
-        <div className='Todo'>
-            <div>
-                <input onClick={toggleChecked} className="form-check-input" type="checkbox" value="" id="flexCheckDefault"></input>
-                <label className={!isChecked ? "form-check-label" : "form-check-label checked"} htmlFor="flexCheckDefault">{props.todo}</label>
-            </div>
-            <i className="fa-solid fa-trash-can"></i>
+        <div className="Todo">
+            <p onClick={toggleCompleted} className={isCompleted ? "completed" : ""}>{todo}</p>
+            <i onClick={handleDeleteActiveTodo}className="fa-solid fa-trash-can"></i>
         </div>
     )
 }

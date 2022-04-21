@@ -1,19 +1,20 @@
-.Todo {
+.DeletedTodo {
     display: flex;
     justify-content: space-between;
     height: 3rem;
     padding-left: 1.5rem;
 }
 
- .Todo i {
-     padding-right: 1.5rem;
- }
-
-.completed {
-    text-decoration: line-through;
-    color: rgb(184, 184, 184)
+.DeletedTodo i {
+    padding-right: 1.5rem;
 }
 
-.Todo p, .Todo i:hover {
+.DeletedTodo i:hover {
     cursor: pointer;
+}
+
+.DeletedTodo p {
+    padding-left: .5rem;
+    text-decoration: line-through;
+    color: rgb(184, 184, 184)
 }
