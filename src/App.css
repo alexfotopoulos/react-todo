@@ -1,1 +1,47 @@
+body {
+    background-color: rgb(179, 179, 179);
+}
 
+.App {
+    min-height: 500px;
+    padding: 0;
+    width: 40%;
+    margin-top: 5rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header {
+    background-color: rgb(50, 85, 201);
+    margin: 0;
+    height: 4rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 1.5rem;
+    font-size: larger;
+}
+
+footer {
+    background-color: rgb(245, 245, 249);
+    padding: 0 1.5rem
+}
+
+.App-footerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3.3rem
+}
+
+.App-footerElement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.App-footerElement span {
+    font-size: small;
+}
