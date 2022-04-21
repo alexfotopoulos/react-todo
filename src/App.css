@@ -3,20 +3,22 @@ body {
 }
 
 .App {
-    min-height: 500px;
+    height: 500px;
     padding: 0;
     width: 40%;
+    min-width: 400px;
     margin-top: 5rem;
     background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    flex-grow: 1;
 }
 
 header {
     background-color: rgb(50, 85, 201);
     margin: 0;
-    height: 4rem;
+    height: 10%;
     color: white;
     display: flex;
     align-items: center;
@@ -26,7 +28,16 @@ header {
 
 footer {
     background-color: rgb(245, 245, 249);
-    padding: 0 1.5rem
+    padding: 0 1.5rem;
+    color: rgb(184, 184, 184);
+    height: 10%;
+}
+
+.App-todoContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80%
 }
 
 .App-footerContainer {
@@ -44,4 +55,22 @@ footer {
 
 .App-footerElement span {
     font-size: small;
+    margin-top: .2rem;
+}
+
+.App-addTodoButton {
+    margin-left: auto;
+    padding-bottom: .7rem;
+    padding-right: 1.5rem;
+    font-size: 2.5rem;
+    color: rgb(50, 85, 201)
+}
+
+.App-addTodoButton:hover {
+    margin-left: auto;
+    padding-bottom: .7rem;
+    padding-right: 1.5rem;
+    font-size: 2.5rem;
+    color: rgb(44, 75, 179);
+    cursor: pointer;
 }
