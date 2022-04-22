@@ -15,7 +15,7 @@ body {
     flex-grow: 1;
 }
 
-header {
+.App header {
     background-color: rgb(50, 85, 201);
     margin: 0;
     height: 10%;
@@ -77,4 +77,8 @@ footer {
     font-size: 2.5rem;
     color: rgb(44, 75, 179);
     cursor: pointer;
+}
+
+#noTodos {
+    padding-left: 1.5rem;
 }

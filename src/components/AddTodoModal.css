@@ -16,7 +16,16 @@
     min-width: 400px;
     width: 33%;
     background-color: white;
-    border-radius: 1rem;
-    padding: 1rem;
     z-index: 10;
+    border-radius: 1rem;
+}
+
+.AddTodoModal-header {
+    background-color: rgb(50, 85, 201);
+    color: white;
+    padding-left: 1.5rem;
+    font-size: larger;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    line-height: 3rem;
 }

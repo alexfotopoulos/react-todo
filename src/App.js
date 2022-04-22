@@ -12,9 +12,13 @@ function App() {
 
   let content
   if (viewMode === 'active') {
-    content = todoCtx.todos.map(todo => (
-      <Todo key={todo.id} id={todo.id} todo={todo.task} />
-    ))
+    if (todoCtx.todos.length > 0) {
+      content = todoCtx.todos.map(todo => (
+        <Todo key={todo.id} id={todo.id} todo={todo.task} />
+      ))
+    } else {
+      content = <p id='noTodos'>You have no outstanding tasks...</p>
+    }
   } else if (viewMode === 'history') {
     content = todoCtx.history.map(todo => (
       <DeletedTodo key={todo.id} id={todo.id} todo={todo.task} />
