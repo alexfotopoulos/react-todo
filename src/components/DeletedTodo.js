@@ -2,11 +2,11 @@ import React, {useContext} from 'react'
 import './DeletedTodo.css'
 import TodoContext from '../store/TodoContext'
 
-export default function DeletedTodo({todo}) {
+export default function DeletedTodo({todo, id}) {
     const todoCtx = useContext(TodoContext)
 
     function handleDeleteHistoryTodo() {
-        todoCtx.deleteTodoFromHistory(todo)
+        todoCtx.deleteTodoFromHistory(id)
     }
     return (
         <div className="DeletedTodo">

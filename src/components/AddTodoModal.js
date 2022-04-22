@@ -12,7 +12,9 @@ export default function AddTodoModal(props) {
 
     function handleSubmit(e) {
         e.preventDefault()
-        let newTodo = todoRef.current.value
+        let newTodo = {task: '', id: ''}
+        newTodo.task = todoRef.current.value
+        newTodo.id = Math.random().toFixed(6)
         todoCtx.addTodo(newTodo)
         props.clearModal()
     }

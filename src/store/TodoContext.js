@@ -16,16 +16,16 @@ export const TodoContextProvier = (props) => {
         setTodos(prevTodos => [...prevTodos, todo])
     }
 
-    function handleDeleteTodo(todo) {
-        setTodos(prevTodos => prevTodos.filter(prevTodo => prevTodo!== todo))
+    function handleDeleteTodo(todo, id) {
+        setTodos(prevTodos => prevTodos.filter(prevTodo => prevTodo.id !== id))
         setHistory(prevHistory => {
-            return [...prevHistory, todo]
+            return [...prevHistory, {task: todo, id: id}]
         })
     }
 
-    function handleDeleteTodoFromHistory(todo) {
+    function handleDeleteTodoFromHistory(id) {
         setHistory(prevHistory => {
-            return prevHistory.filter(prev => prev !== todo)
+            return prevHistory.filter(prev => prev.id !== id)
         })
     }
 

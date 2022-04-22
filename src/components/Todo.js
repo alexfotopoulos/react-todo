@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react'
 import TodoContext from '../store/TodoContext'
 import './Todo.css'
 
-export default function Todo({todo}) {
+export default function Todo({todo, id}) {
     const [isCompleted, setIsCompleted] = useState(false)
     const todoCtx = useContext(TodoContext)
 
@@ -11,7 +11,7 @@ export default function Todo({todo}) {
     }
 
     function handleDeleteActiveTodo() {
-        todoCtx.deleteTodo(todo)
+        todoCtx.deleteTodo(todo, id)
       }
 
     return (

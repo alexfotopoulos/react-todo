@@ -13,11 +13,11 @@ function App() {
   let content
   if (viewMode === 'active') {
     content = todoCtx.todos.map(todo => (
-      <Todo key={todo} id={todo} todo={todo} />
+      <Todo key={todo.id} id={todo.id} todo={todo.task} />
     ))
   } else if (viewMode === 'history') {
     content = todoCtx.history.map(todo => (
-      <DeletedTodo key={todo} id={todo} todo={todo} />
+      <DeletedTodo key={todo.id} id={todo.id} todo={todo.task} />
     ))
   }
 
